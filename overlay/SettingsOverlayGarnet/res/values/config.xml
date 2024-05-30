@@ -38,4 +38,7 @@
     <!--DerpFest Maintainer-->
     <string name="maintainer_name">Afdul Fauzan (g0me0w)</string>
     <string name="maintainer_telegram">https://t.me/g0me0w</string>
+    
+    <!-- Show battery cycle count -->
+    <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
 </resources>
