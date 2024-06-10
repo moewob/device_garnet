@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2024 The LineageOS Project
+ * Copyright (C) 2022 The LineageOS Project
  *               2023 Paranoid Android
  *
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "UdfpsHandler.xiaomi13"
+#define LOG_TAG "UdfpsHandler.garnet"
 
 #include <android-base/logging.h>
 #include <android-base/properties.h>
@@ -86,7 +86,7 @@ static disp_event_resp* parseDispEvent(int fd) {
 
 }  // anonymous namespace
 
-class XiaomiSm8550UdfpsHander : public UdfpsHandler {
+class XiaomiGarnetUdfpsHander : public UdfpsHandler {
   public:
     void init(fingerprint_device_t* device) {
         mDevice = device;
@@ -210,7 +210,7 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
         lastPressY = y;
 
         /*
-         * On fuxi, the waiting for finger message is not reliably sent...
+         * On fpc_fod devices, the waiting for finger message is not reliably sent...
          * The finger down message is only reliably sent when the screen is turned off, so enable
          * fod_status better late than never.
          */
@@ -291,7 +291,7 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
 };
 
 static UdfpsHandler* create() {
-    return new XiaomiSm8550UdfpsHander();
+    return new XiaomiGarnetUdfpsHander();
 }
 
 static void destroy(UdfpsHandler* handler) {
