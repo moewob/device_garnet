@@ -36,5 +36,5 @@ BUILD_FINGERPRINT := Redmi/garnet_global/garnet:13/TKQ1.221114.001/V14.0.6.0.TNR
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # UDFPS Flags
-TARGET_HAS_UDFPS := false
+TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
